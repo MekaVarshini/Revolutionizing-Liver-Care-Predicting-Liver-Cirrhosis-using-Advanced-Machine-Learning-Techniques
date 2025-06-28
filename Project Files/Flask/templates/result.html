@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #fbe9e7);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #8B0000;
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .healthy {
+            color: green;
+        }
+
+        .risk {
+            color: #d32f2f;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background-color: #b30000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🧪 Liver Cirrhosis Prediction Result</h2>
+        <div class="result">
+            {% if prediction == 1 %}
+                <span class="risk">⚠️ High Risk of Liver Cirrhosis</span>
+            {% else %}
+                <span class="healthy">✅ No Liver Cirrhosis Detected</span>
+            {% endif %}
+        </div>
+        <a href="/">🔙 Try Another Prediction</a>
+    </div>
+</body>
+</html>
+
